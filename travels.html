@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travels</title>
+    <link rel="stylesheet" href="1.css">
+    <style>
+        body {
+            background-color: black;
+            color: white; /* Text color set to white */
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        header, footer {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .content-container {
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 80vh; /* Set maximum height for scrolling */
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .content-item {
+            flex: 0 0 45%; /* Adjust the width as needed */
+            margin-bottom: 20px;
+            display: flex; /* Make it a flex container */
+            align-items: center; /* Align items vertically */
+        }
+
+        .content-item img {
+            width: 50%; /* Adjust image width */
+            border-radius: 10px; /* Rounded corners for images */
+            cursor: pointer;
+            margin-right: 10px; /* Add some space between image and text */
+        }
+
+        .content-item p {
+            flex: 1; /* Take remaining space */
+            margin: 0; /* Remove default margin */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Outdoor Adventure" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Blogs</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="travels.html">Travels</a></li>
+                        <li><a href="gaming.html">Foods</a></li>
+                    </ul>
+                </li>           
+                <li><a href="3.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="content-container"> <!-- Wrap the main content in a scrollable container -->
+            <section class="content">
+                <div class="content-item">
+                    <img src="drink.jpg" alt="Food 1" onclick="viewPhoto('drink.jpg')">
+                    <p>Enjoying a refreshing drink by the beach.</p>
+                </div>
+                <div class="content-item">
+                    <img src="food2.jpg" alt="Food 2" onclick="viewPhoto('food2.jpg')">
+                    <p>Sampling local cuisine at a traditional market.</p>
+                </div>
+                <div class="content-item">
+                    <img src="drink.jpg" alt="Food 1" onclick="viewPhoto('drink.jpg')">
+                    <p>Exploring the vibrant nightlife of the city.</p>
+                </div>
+                <div class="content-item">
+                    <img src="food2.jpg" alt="Food 2" onclick="viewPhoto('food2.jpg')">
+                    <p>Embarking on a hiking adventure in the mountains.</p>
+                </div>
+                <div class="content-item">
+                    <img src="drink.jpg" alt="Food 1" onclick="viewPhoto('drink.jpg')">
+                    <p>Discovering hidden gems in a quaint countryside.</p>
+                </div>
+                <div class="content-item">
+                    <img src="food2.jpg" alt="Food 2" onclick="viewPhoto('food2.jpg')">
+                    <p>Relaxing in a cozy cafe with a cup of coffee.</p>
+                </div>
+                <div><iframe width="400" height="200" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe></div>
+            </section>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <h3>Contact:</h3>
+            <p>Email: njay01491@gmail.com</p>
+            <p>Phone: 09976086931</p>
+        </div>
+        <div class="social-icons">
+            <h4>Follow me on:</h4>
+            <a href="#"><img src="fb.png" alt="Facebook"></a>
+            <a href="#"><img src="tiktok.png" alt="Youtube"></a>
+            <a href="#"><img src="insta.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+</body>
+</html>

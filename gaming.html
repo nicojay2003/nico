@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travels</title>
+    <link rel="stylesheet" href="1.css">
+    <style>
+        body {
+            background-color: black;
+            color: white; /* Text color set to white */
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        header, footer {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .content-container {
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 80vh; /* Set maximum height for scrolling */
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .content-item {
+            flex: 0 0 45%; /* Adjust the width as needed */
+            margin-bottom: 20px;
+            display: flex; /* Make it a flex container */
+            align-items: center; /* Align items vertically */
+        }
+
+        .content-item img {
+            width: 50%; /* Adjust image width */
+            border-radius: 10px; /* Rounded corners for images */
+            cursor: pointer;
+            margin-right: 10px; /* Add some space between image and text */
+        }
+
+        .content-item p {
+            flex: 1; /* Take remaining space */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            max-width: 700px;
+            max-height: 80%;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .close {
+            color: #fff;
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Outdoor Adventure" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Blogs</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="travels.html">Travels</a></li>
+                        <li><a href="gaming.html">Foods</a></li>
+                    </ul>
+                </li>           
+                <li><a href="3.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="content-container"> <!-- Wrap the main content in a scrollable container -->
+            <section class="content">
+                <div class="content-item">
+                    <img src="image1.jpg" alt="image1" onclick="openPopup('image1.jpg')">
+                    <p>This is my Base, it's only a TownHall 11 and a semi max base.</p>
+                </div>
+                <div class="content-item">
+                    <img src="image2.jpg" alt="image2" onclick="openPopup('image2.jpg')">
+                    <p>This is a multiplayer attack where you will attack any player around the world.</p>
+                </div>
+                <div class="content-item">
+                    <img src="image3.jpg" alt="image3" onclick="openPopup('image3.jpg')">
+                    <p>This is a Clan Capital attack where your heroes are more like a super troops in the main base.</p>
+                </div>
+                <div class="content-item">
+                    <img src="image4.jpg" alt="image4" onclick="openPopup('image4.jpg')">
+                    <p>This is a Builder Hall attack and I also like this because you can attack anytime you want 'cause you can't cook troops to attack unlike in the Main base.</p>
+                </div>
+                <div class="video"><iframe width="400" height="200" src="game.mp4" frameborder="0" allowfullscreen></iframe></div>
+            </section>
+        </div>
+        <div id="modal" class="modal" onclick="closeModal()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <img id="modal-img" src="" alt="">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <h3>Contact:</h3>
+            <p>Email: njay01491@gmail.com</p>
+            <p>Phone: 09976086931</p>
+        </div>
+        <div class="social-icons">
+            <h4>Follow me on:</h4>
+            <a href="#"><img src="fb.png" alt="Facebook"></a>
+            <a href="#"><img src="tiktok.png" alt="Youtube"></a>
+            <a href="#"><img src="insta.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
